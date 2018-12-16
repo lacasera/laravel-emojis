@@ -1,0 +1,14 @@
+{
+    "name": "lacasera/nifty-commands",
+    "description": "This is a package containing cool but useful artisan commands",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "lacasera",
+            "email": "aboateng62@gmail.com"
+        }
+    ],
+    "require": {}
+}
