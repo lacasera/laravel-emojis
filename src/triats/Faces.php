@@ -1,7 +1,7 @@
 <?php
 namespace Lacasera\Emojis;
 
-trait FaceEmojiList
+trait Faces
 {
     protected $faces =  [
         ':smile' =>'😀', ':wink' =>'😁', ':joy'=>'😂',
@@ -66,6 +66,8 @@ trait FaceEmojiList
         ':lying_face'=>'🤥', ':shusing_face'=>'🤫',
         ':face_with_hand_over_mouth'=>'🤭',
         ':face_with_monocle'=>'🧐',
-        ':nerd_face'=>'🤓'
+        ':nerd_face'=>'🤓',
+        ':skull' => '💀',
+        ':skull_crossbones' => '☠'
     ];
 }
