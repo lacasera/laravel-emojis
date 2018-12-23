@@ -2,15 +2,20 @@
 
 namespace Lacasera\Emojis;
 
+use Exception;
+
 class Emoticons
 {
-    use EmojiList;
+    use Faces, Animals;
 
     protected $emojis;
 
     public function __construct()
     {
-       $this->emojis = collect($this->emogiList);
+       $this->emojis = collect(array_merge(
+           $this->faces,
+           $this->animals
+       ));
     }
 
     public function getEmoji($name)
@@ -23,7 +28,15 @@ class Emoticons
         return $this->emojis->random();
     }
 
-    protected function appendSemiColonToName($name)
+    public function getCategory($category)
+    {
+        if (!property_exists(self::class, $category)){
+            throw new Exception("No category found for '$category'",500);
+        }
+        return $this->$category;
+    }
+
+    private function appendSemiColonToName($name)
     {
         if (!str_contains($name, ':'))
             return ':'.$name;
