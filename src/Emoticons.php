@@ -4,13 +4,15 @@ namespace Lacasera\Emojis;
 
 class Emoticons
 {
-    use EmojiList;
+    use FaceEmojiList;
 
     protected $emojis;
 
     public function __construct()
     {
-       $this->emojis = collect($this->emogiList);
+       $this->emojis = collect(array_merge(
+           $this->faces
+       ));
     }
 
     public function getEmoji($name)

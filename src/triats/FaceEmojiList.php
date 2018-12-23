@@ -1,9 +1,9 @@
 <?php
 namespace Lacasera\Emojis;
 
-trait EmojiList
+trait FaceEmojiList
 {
-    protected $emogiList =  [
+    protected $faces =  [
         ':smile' =>'😀', ':wink' =>'😁', ':joy'=>'😂',
         ':rolling_on_the_floor_laughing'=>'🤣',
         ':grinning_face_with_big_eyes' => '😃',
